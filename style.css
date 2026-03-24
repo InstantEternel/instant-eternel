@@ -1783,52 +1783,37 @@ iframe {
 
 
 
+/* ==========================================
+   CSS MOBILE - PAGE AVIS
+   ========================================== */
 @media (max-width: 768px) {
- /* ===== PAGE ===== */
-
   .avis-page {
-
-    width: 100%;
-
-    padding: 80px 10px 60px; /* 🔥 remonte et aère */
-
+    width: 100% !important;
+    padding: 80px 10px 60px !important; /* 🔥 remonte et aère */
   }
-
-
 
   /* ===== TITRE ===== */
-
   .avis-header {
-
-    margin-top: 0;
-
-    margin-bottom: 30px;
-
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
   }
-
-
 
   .avis-title {
-
-    font-size: 50px;
-
+    font-size: 50px !important;
+    line-height: 1 !important;
   }
-
-
 
   .avis-underline {
-
-    width: 100px;
-
-    margin-top: -8px;
-
+    width: 100px !important;
+    margin: -8px auto 0 !important;
+    height: 2px !important;
+    background: var(--text) !important;
   }
 
-
-
-/* ===== FORMULAIRE (Nettoyage des covers) ===== */
+  /* ===== FORMULAIRE (Nettoyage des covers) ===== */
   .avis-form-zone {
-    margin-bottom: 200px !important;
+    margin-bottom: 200px !important; /* Ton réglage d'espace */
     display: flex !important;
     justify-content: center !important;
     position: relative !important;
@@ -1845,10 +1830,10 @@ iframe {
   .avis-typeform-wrap {
     width: 95% !important;
     max-width: 350px !important; 
-    height: 480px !important; /* On l'agrandit un poil pour être sûr de voir le bouton */
+    height: 480px !important; 
     position: relative !important;
     margin: 0 auto !important;
-    overflow: visible !important; /* On laisse respirer le bouton si besoin */
+    overflow: visible !important; 
   }
 
   /* 2. ON GARDE LE CACHE DU HAUT (Pour le titre) */
@@ -1866,81 +1851,53 @@ iframe {
 
   /* 3. ON TUE LE CACHE DU BAS (Ligne 84 de ton CSS global) */
   .avis-typeform-wrap::after {
-    content: none !important; /* Supprime le contenu */
-    display: none !important; /* Cache le bloc */
+    content: none !important; 
+    display: none !important; 
     width: 0 !important;
     height: 0 !important;
-    bottom: -100px !important; /* L'envoie très loin hors écran au cas où */
+    bottom: -100px !important; 
   }
 
-  /* On s'assure que l'iframe n'est pas limitée par un overflow */
   .avis-typeform {
     min-height: 480px !important;
   }
 
-
-
   /* ===== PRECEDENTS AVIS ===== */
-
   .avis-prev-title {
-
-    font-size: 38px;
-
-    margin-top: -10px;
-
-    margin-bottom: 15px;
-
+    font-size: 38px !important;
+    margin-top: -10px !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
   }
-
-
 
   .avis-list {
-
-    gap: 18px;
-
+    gap: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
-
-
 
   .avis-prev-zone {
-
-  position: relative;
-
-  z-index: 10000; /* 🔥 au-dessus du cover */
-
+    position: relative !important;
+    z-index: 10000 !important; /* 🔥 au-dessus du cover */
   }
-
-
 
   /* ===== BULLES ===== */
-
   .avis-bubble {
-
-    width: 95%;
-
-    padding: 14px 16px;
-
-    border-radius: 26px; /* 🔥 plus compact */
-
+    width: 95% !important;
+    padding: 14px 16px !important;
+    border-radius: 26px !important;
+    margin: 0 auto !important;
   }
-
-
 
   .avis-bubble-head {
-
-    font-size: 26px;
-
-    margin-bottom: 6px;
-
+    font-size: 26px !important;
+    margin-bottom: 6px !important;
+    text-align: left !important;
   }
 
-
-
   .avis-bubble-text {
-
-    font-size: 22px;
-
-    line-height: 1.5;
-
+    font-size: 22px !important;
+    line-height: 1.5 !important;
   }
 }

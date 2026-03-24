@@ -1664,7 +1664,7 @@ iframe {
   .contact-left {
     order: 1 !important; /* Force la 1ère position */
     width: 100% !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 40px !important;
     text-align: center !important;
   }
   .contact-title {
@@ -1672,8 +1672,8 @@ iframe {
     display: inline-block !important;
   }
   .contact-underline {
-    margin: -15px auto 0 !important; /* Espace ajusté entre mot et trait */
-    width: 145px !important;
+    margin: -20px auto 0 !important; /* Espace ajusté entre mot et trait */
+    width: 150px !important;
     height: 2px !important;
     background: var(--text) !important;
   }

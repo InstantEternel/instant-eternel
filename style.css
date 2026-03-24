@@ -1868,3 +1868,11 @@ iframe {
   }
 
 }
+
+@media (max-width: 768px){
+  .tf-widget,
+  .typeform-embed{
+    width: 100% !important;
+    height: 550px !important;
+  }
+}

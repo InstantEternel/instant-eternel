@@ -1669,6 +1669,11 @@ iframe {
     gap: 0 !important;
   }
 
+   /* ===== ORDRE ===== */
+  .contact-left   { order: 1; }
+  .contact-right  { order: 2; }
+  .contact-infos  { order: 3; }
+
   /* ==================================
      2. TITRE "CONTACT" (Calage Précis)
      ================================== */
@@ -1687,7 +1692,7 @@ iframe {
   }
   .contact-underline {
     /* AJUSTEMENT ICI : Augmente le chiffre négatif pour coller, diminue pour éloigner */
-    margin: -9px auto 0 !important; /* -15px pour laisser un peu d'air */
+    margin: -11px auto 0 !important; /* -15px pour laisser un peu d'air */
     width: 140px !important;
     height: 2px !important;
     background: var(--text) !important;
@@ -1768,7 +1773,7 @@ iframe {
     height: 40px !important;
     position: relative !important;
     /* Espace entre le questionnaire (haut) et les infos (bas) */
-    margin: 300px 0 300px !important; 
+    margin: 60px 0 30px !important; 
     /* Calage précis du bord gauche pour aligner avec les infos */
     padding-left: 20px !important; 
   }

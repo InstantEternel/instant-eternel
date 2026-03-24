@@ -1825,7 +1825,7 @@ iframe {
 
 /* ===== FORMULAIRE (Nettoyage des covers) ===== */
   .avis-form-zone {
-    margin-bottom: 1000px !important;
+    margin-bottom: 250px !important;
     display: flex !important;
     justify-content: center !important;
     position: relative !important;
@@ -1918,6 +1918,7 @@ iframe {
     padding: 14px 16px;
 
     border-radius: 26px; /* 🔥 plus compact */
+    margin-top: 10px;
 
   }
 

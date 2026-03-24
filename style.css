@@ -1672,8 +1672,8 @@ iframe {
     display: inline-block !important;
   }
   .contact-underline {
-    margin: -8px auto 0 !important; /* Espace ajusté entre mot et trait */
-    width: 140px !important;
+    margin: -15px auto 0 !important; /* Espace ajusté entre mot et trait */
+    width: 145px !important;
     height: 2px !important;
     background: var(--text) !important;
   }
@@ -1758,7 +1758,7 @@ iframe {
 
   .contact-separator .line-a { 
     width: 120px !important; 
-    top: 10px !important; 
+    top: 9px !important; 
   }
 
   .contact-separator .line-b { 

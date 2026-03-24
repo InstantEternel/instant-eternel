@@ -1823,25 +1823,30 @@ iframe {
 
 
 
-  /* ===== FORMULAIRE ===== */
+ /* ===== FORMULAIRE (Nettoyage des 2 covers) ===== */
   .avis-form-zone {
-    margin-bottom: 100px !important;
+    margin-bottom: 60px !important;
     display: flex !important;
     justify-content: center !important;
+    position: relative !important;
+  }
+
+  /* ICI : On supprime le cache "ordinateur" qui déborde sur mobile */
+  .avis-form-zone::after {
+    display: none !important;
+    content: none !important;
   }
 
   .avis-typeform-wrap {
-    width: 95% !important; /* Pour ne pas toucher les bords de l'écran */
+    width: 95% !important;
     max-width: 350px !important; 
     height: 450px !important;
     position: relative !important;
     margin: 0 auto !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important; /* Enlève toute ombre possible */
+    overflow: hidden !important;
   }
 
-  /* Cover du haut (garde le titre Typeform caché) */
+  /* Cover du haut (on le garde pour le titre) */
   .avis-typeform-wrap::before {
     content: "" !important;
     position: absolute !important;
@@ -1851,21 +1856,12 @@ iframe {
     height: 35px !important;
     background: var(--bg) !important;
     z-index: 10 !important;
-    display: block !important;
   }
 
-  /* NETTOYAGE TOTAL DU BAS */
+  /* On supprime le cover du bas du wrap */
   .avis-typeform-wrap::after {
-    content: none !important; /* Supprime carrément le contenu */
     display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-
-  /* Forcer la transparence de l'iframe interne */
-  .avis-typeform iframe {
-    background: transparent !important;
-    background-color: transparent !important;
+    content: none !important;
   }
 
 

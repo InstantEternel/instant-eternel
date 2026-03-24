@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://instanteternel.github.io/instant-eternel/sitemap.xml

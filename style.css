@@ -1,52 +1,50 @@
-:root{
-  --bg:#F2EFEB;
-  --text:#2b2b2b;
-  --muted:#4a4a4a;
-  --line:#cfc7bd;
-  --maxw:1100px;
+:root {
+  --bg: #F2EFEB; /* Couleur de fond officielle et unique pour tout le site */
+  --text: #2b2b2b;
+  --muted: #4a4a4a;
+  --line: #cfc7bd;
+  --maxw: 1100px;
 }
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
-img{max-width:100%;display:block}
+
+img { max-width: 100%; display: block; }
 
 /* --- Header (accueil) --- */
-.site-header{
-  padding:46px 0 24px;
+.site-header {
+  padding: 46px 0 24px;
 }
 
-/* ligne du haut : Portfolio / Tarifs    Contact / Avis */
-.nav-top{
-  width:min(92%, var(--maxw));
-  margin:0 auto;
-  display:flex;
-  justify-content:center;
-  gap:500px;
+.nav-top {
+  width: min(92%, var(--maxw));
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 500px;
 }
 
-/* groupes gauche et droit (Portfolio–Tarifs, Contact–Avis) */
-.nav-left,
-.nav-right{
-  display:flex;
-  gap:200px;
+.nav-left, .nav-right {
+  display: flex;
+  gap: 200px;
 }
 
-.nav-left a,
-.nav-right a{
-  font-family:"Allura", cursive;
-  font-size:34px;
-  font-weight:400;
-  color:var(--text);
-  text-decoration:none;
+.nav-left a, .nav-right a {
+  font-family: "Allura", cursive;
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
 }
 
-/* logo centré en dessous */
-.logo-row{
+.logo-row {
   width: auto;
   display: flex;
   justify-content: center;
@@ -54,1128 +52,846 @@ img{max-width:100%;display:block}
   margin-bottom: 12px;
 }
 
-.logo img{
+.logo img {
   height: 285px;
   width: auto;
   aspect-ratio: 1 / 1;
 }
 
 /* --- Hero (texte sous le logo) --- */
-.hero{
-  width:min(92%, var(--maxw));
-  margin:34px auto 64px;
-  text-align:center;
+.hero {
+  width: min(92%, var(--maxw));
+  margin: 34px auto 64px;
+  text-align: center;
 }
 
-/* Titre : Chloé Briqué, photographe polyvalente. */
-.hero-title{
-  font-family:"Allura", cursive;
-  font-size:38px;
-  font-weight:500;
-  margin:10px 0 8px;
+.hero-title {
+  font-family: "Allura", cursive;
+  font-size: 38px;
+  font-weight: 500;
+  margin: 10px 0 8px;
 }
 
-/* Sous-phrase : Je suis ici, pour rendre vos instants éternel ! */
-.hero-sub{
-  font-family:"Allura", cursive;
-  font-size:38px;
-  font-weight:400;
-  margin:0 0 94px;
+.hero-sub {
+  font-family: "Allura", cursive;
+  font-size: 38px;
+  font-weight: 400;
+  margin: 0 0 94px;
 }
 
-/* --- Carrousel accueil (final + petit arrondi) --- */
-.triptych{
-  position:relative;
-  width:100%;
-  margin:0 0 140px;
-  padding:0;
+/* --- Carrousel accueil --- */
+.triptych {
+  position: relative;
+  width: 100%;
+  margin: 0 0 140px;
+  padding: 0;
 }
 
-.arrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(242,239,235,0.9);
-  border-radius:999px;
-  border:1px solid #bab0a4;
-  cursor:pointer;
-  padding:10px 14px;
-  color:#5a5a5a;
-  z-index:5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(242,239,235,0.9);
+  border-radius: 999px;
+  border: 1px solid #bab0a4;
+  cursor: pointer;
+  padding: 10px 14px;
+  color: #5a5a5a;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#prev{left:1.5vw;}
-#next{right:1.5vw;}
-.arrow svg{display:block;}
-.arrow:hover{color:#222;border-color:#8b7d6d;}
 
-/* Viewport plein écran */
-.strip{
+#prev { left: 1.5vw; }
+#next { right: 1.5vw; }
+.arrow svg { display: block; }
+.arrow:hover { color: #222; border-color: #8b7d6d; }
+
+.strip {
   --gap: clamp(5px, 0.9vw, 11px);
   --cardW: clamp(320px, 36vw, 560px);
   --radius: 8px;
 
-  width: calc(100vw + 40px);              /* 👈 un poil plus large */
-  margin-left: calc(50% - 50vw - 20px);  /* 👈 recentrage */
+  width: calc(100vw + 40px);
+  margin-left: calc(50% - 50vw - 20px);
   margin-right: calc(50% - 50vw - 20px);
-  overflow:hidden;
+  overflow: hidden;
 }
 
-/* Track centré */
-.track{
-  display:flex;
-  align-items:center;
+.track {
+  display: flex;
+  align-items: center;
   gap: var(--gap);
-
   padding-left: calc(50% - (var(--cardW) / 2));
   padding-right: calc(50% - (var(--cardW) / 2));
-
   will-change: transform;
   transform: translateX(0);
 }
 
-/* Cartes */
-.slide{
+.slide {
   width: var(--cardW);
   aspect-ratio: 4 / 3;
-  overflow:hidden;
+  overflow: hidden;
   border-radius: var(--radius);
   background: transparent;
-  box-shadow:none;
+  box-shadow: none;
   flex: 0 0 auto;
 }
 
-/* Images : fidélité (aucun effet) */
-.slide img{
-  width:100%;
-  height:100%;
+.slide img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  display:block;
-
-  filter:none;
-  opacity:1;
-  transform:none;
+  display: block;
+  filter: none;
+  opacity: 1;
+  transform: none;
 }
 
-/* Centre : léger repère sans toucher la photo */
-.slide.is-center{
+.slide.is-center {
   outline: 1px solid rgba(186,176,164,.6);
   outline-offset: 0;
 }
 
-@media (prefers-reduced-motion: reduce){
-  .track{ transition:none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .track { transition: none !important; }
 }
-/* Évite que le carrousel "pop" (réserve la place avant chargement) */
-.triptych{
-  min-height: 420px; /* ajuste si besoin: 380–480 */
+
+.triptych {
+  min-height: 420px;
 }
 
 /* --- À propos --- */
-.about{
-  width:min(92%, var(--maxw));
-  margin:0 auto;
-  padding:52px 0 110px;
-  text-align:center;
+.about {
+  width: min(92%, var(--maxw));
+  margin: 0 auto;
+  padding: 52px 0 110px;
+  text-align: center;
 }
 
-/* Titre A PROPOS DE MOI */
-.about-title{
-  font-family:"Allura", cursive;
-  font-size:44px;
-  font-weight:500;
-  margin:0 0 40px;
+.about-title {
+  font-family: "Allura", cursive;
+  font-size: 44px;
+  font-weight: 500;
+  margin: 0 0 40px;
 }
 
-.about-portrait{
-  width:170px;
-  height:170px;
-  border-radius:50%;
-  object-fit:cover;
-  object-position:50% 15%;
-  margin:50px auto;
-
-  /* rendu propre */
+.about-portrait {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 15%;
+  margin: 50px auto;
   image-rendering: auto;
   transform: translateZ(0);
 }
 
-/* Moi, c’est Chloé ! */
-.about-lead{
-  font-family:"Allura", cursive;
-  font-size:30px;
-  font-weight:400;
-  margin:50px 0 50px;
+.about-lead {
+  font-family: "Allura", cursive;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 50px 0 50px;
 }
 
-/* Texte long */
-.about-text{
-  font-family:"Allura", cursive;
-  font-size:26px;
-  font-weight:400;
-  max-width:900px;
-  margin:0 auto;
-  line-height:1.8;
+.about-text {
+  font-family: "Allura", cursive;
+  font-size: 26px;
+  font-weight: 400;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
-.about-text p{
-  margin:0 0 22px;
+
+.about-text p {
+  margin: 0 0 22px;
 }
 
 /* --- Footer accueil --- */
-.site-footer{
-  padding:16px 0 26px;
+.site-footer {
+  padding: 16px 0 26px;
 }
-.rule-wrap{
-  display:flex;
-  justify-content:center;
-  margin:10px 0 16px;
+
+.rule-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 16px;
 }
-.footer-rule{
-  width:90%;
-  border:none;
-  border-top:2px solid #4d4135;
+
+.footer-rule {
+  width: 90%;
+  border: none;
+  border-top: 2px solid #4d4135;
 }
-.footer-cta{
-  width:min(92%, var(--maxw));
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  align-items:center;
-  gap:12px;
-  text-align:center;
+
+.footer-cta {
+  width: min(92%, var(--maxw));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
 }
-.footer-link{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  color:var(--text);
-  text-decoration:none;
-  font-family:"Allura", cursive;
-  font-size:22px;
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Allura", cursive;
+  font-size: 22px;
 }
-.footer-link.left{justify-self:start;}
-.footer-link.center{justify-self:center;}
-.footer-link.right{justify-self:end;}
-.footer-link .icon{
-  display:block;
-  transform:translateY(-3px);
+
+.footer-link.left { justify-self: start; }
+.footer-link.center { justify-self: center; }
+.footer-link.right { justify-self: end; }
+
+.footer-link .icon {
+  display: block;
+  transform: translateY(-3px);
 }
-.footer-link .icon.fb{
-  transform:translateY(-4px);
+
+.footer-link .icon.fb {
+  transform: translateY(-4px);
 }
 
 /* --- Responsive accueil --- */
-@media (max-width:900px){
-  .nav-top{gap:90px;}
-  .nav-left,.nav-right{gap:34px;}
-  .logo img{height:220px;}
-  .strip{gap:20px;}
-  .strip img{max-height:240px;}
-  .strip img.center{max-height:300px;}
-  .about-text{font-size:24px;}
+@media (max-width:900px) {
+  .nav-top { gap: 90px; }
+  .nav-left, .nav-right { gap: 34px; }
+  .logo img { height: 220px; }
+  .strip { gap: 20px; }
+  .strip img { max-height: 240px; }
+  .strip img.center { max-height: 300px; }
+  .about-text { font-size: 24px; }
 }
-@media (max-width:640px){
-  .nav-top{
-    flex-direction:column;
-    align-items:center;
-    gap:8px;
+
+@media (max-width:640px) {
+  .nav-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
-  .triptych{padding:0 12px;}
-  #prev{left:8px;}
-  #next{right:8px;}
-  .footer-cta{
-    grid-template-columns:1fr;
-    gap:8px;
+  .triptych { padding: 0 12px; }
+  #prev { left: 8px; }
+  #next { right: 8px; }
+  .footer-cta {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
-  .footer-link.left,
-  .footer-link.center,
-  .footer-link.right{
-    justify-self:center;
+  .footer-link.left, .footer-link.center, .footer-link.right {
+    justify-self: center;
   }
 }
 
-/* Empêche le scroll horizontal */
 html, body {
   overflow-x: hidden;
 }
 
-/* Assure que les sections et images ne débordent pas */
-* {
-  box-sizing: border-box;
-}
-
 /* ========== Page Portfolio (3 bulles) ========== */
-
-/* La page Portfolio tient sur un seul écran, contenu centré */
-.portfolio-page{
-  width:min(92%, var(--maxw));
-  margin:0 auto;
-  padding:0;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+.portfolio-page {
+  width: min(92%, var(--maxw));
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Titre Portfolio + trait du haut */
-.portfolio-header{
-  text-align:center;
-  margin:24px 0 10px;
+.portfolio-header {
+  text-align: center;
+  margin: 24px 0 10px;
 }
 
-.portfolio-title{
-  font-family:"Allura", cursive;
-  font-size:55px;
-  font-weight:400;
-  margin:0 0 -5px;
+.portfolio-title {
+  font-family: "Allura", cursive;
+  font-size: 55px;
+  font-weight: 400;
+  margin: 0 0 -5px;
 }
 
-/* Traits du portfolio : 90% de la largeur de l’ÉCRAN, centrés */
-.portfolio-separator{
-  border:none;
-  border-top:2px solid #4d4135;
-  width:90vw;
-  margin-left:calc(50% - 45vw);
-  margin-right:0;
+.portfolio-separator {
+  border: none;
+  border-top: 2px solid #4d4135;
+  width: 90vw;
+  margin-left: calc(50% - 45vw);
+  margin-right: 0;
 }
 
-/* Trait du bas */
-.portfolio-separator-bottom{
-  border:none;
-  border-top:2px solid #4d4135;
-  width:90vw;
-  margin-left:calc(50% - 45vw);
-  margin-right:0;
-  margin-top:10px;
-  margin-bottom:45px;
+.portfolio-separator-bottom {
+  border: none;
+  border-top: 2px solid #4d4135;
+  width: 90vw;
+  margin-left: calc(50% - 45vw);
+  margin-right: 0;
+  margin-top: 10px;
+  margin-bottom: 45px;
 }
 
-/* grille des 3 bulles */
-.portfolio-grid{
-  margin:10px auto 0;
-  display:grid;
-  grid-template-columns:repeat(2, minmax(160px, 1fr));
-  gap:28px 150px;
-  justify-items:center;
+.portfolio-grid {
+  margin: 10px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 28px 150px;
+  justify-items: center;
 }
 
-/* lien image + texte */
-.portfolio-bubble{
-  text-decoration:none;
-  color:var(--text);
-  text-align:center;
+.portfolio-bubble {
+  text-decoration: none;
+  color: var(--text);
+  text-align: center;
 }
 
-/* bulles */
-.bubble-image{
-  width:305px;
-  max-width:100%;
-  border-radius:999px;
-  overflow:hidden;
+.bubble-image {
+  width: 305px;
+  max-width: 100%;
+  border-radius: 999px;
+  overflow: hidden;
 }
 
-.bubble-image img{
-  width:100%;
-  height:auto;
-  display:block;
-  transition:transform .25s ease, box-shadow .25s ease;
+.bubble-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
-/* bulle PRODUITS format paysage */
-.portfolio-bubble.product .bubble-image img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
+.portfolio-bubble.product .bubble-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-/* texte sous les bulles */
-.portfolio-bubble span{
-  font-family:"Allura", cursive;
-  font-size:30px;
-  display:block;
-  margin-top:12px;
+.portfolio-bubble span {
+  font-family: "Allura", cursive;
+  font-size: 30px;
+  display: block;
+  margin-top: 12px;
 }
 
-.portfolio-bubble:hover .bubble-image img{
-  transform:scale(1.03);
-  box-shadow:0 10px 24px rgba(0,0,0,.15);
+.portfolio-bubble:hover .bubble-image img {
+  transform: scale(1.03);
+  box-shadow: 0 10px 24px rgba(0,0,0,.15);
 }
 
-/* centrer la bulle du bas */
-.portfolio-bubble:last-child{
-  grid-column:1 / -1;
+.portfolio-bubble:last-child {
+  grid-column: 1 / -1;
 }
 
-/* ========== Pages de catégories (Portrait / Animaux / Produits) ========== */
-
-.category-header{
-  width:min(92%, var(--maxw));
-  margin:0 auto 40px;
-  text-align:center;
+/* ========== Pages de catégories ========== */
+.category-header {
+  width: min(92%, var(--maxw));
+  margin: 0 auto 40px;
+  text-align: center;
 }
 
-.category-bubble{
-  width:400px;
-  max-width:100%;
-  margin:50px auto 20px;
-  border-radius:999px;
-  overflow:hidden;
+.category-bubble {
+  width: 400px;
+  max-width: 100%;
+  margin: 50px auto 20px;
+  border-radius: 999px;
+  overflow: hidden;
 }
 
-.category-bubble img{
-  width:100%;
-  height:auto;
-  display:block;
+.category-bubble img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.category-title{
-  font-family:"Allura", cursive;
-  font-size:55px;
-  font-weight:400;
-  margin:0 0 100px;
+.category-title {
+  font-family: "Allura", cursive;
+  font-size: 55px;
+  font-weight: 400;
+  margin: 0 0 100px;
 }
 
-/* grille type masonry (mur de photos) */
-.gallery{
-  width:min(92%, var(--maxw));
-  margin:0 auto 60px;
-  column-count:3;
-  column-gap:10px;
-  padding-bottom:120px;
+.gallery {
+  width: min(92%, var(--maxw));
+  margin: 0 auto 60px;
+  column-count: 3;
+  column-gap: 10px;
+  padding-bottom: 120px;
 }
 
-/* chaque image remplit sa colonne */
-.gallery img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:6px;
-  margin-bottom:10px;
-  break-inside:avoid;
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  break-inside: avoid;
 }
 
-/* ===== Apparition progressive des photos (portfolio) ===== */
-.gallery img{
+.gallery img {
   opacity: 0;
   transform: translateY(14px);
-  transition:
-    opacity .65s ease,
-    transform .65s ease;
+  transition: opacity .65s ease, transform .65s ease;
   will-change: opacity, transform;
 }
 
-/* quand l'image devient visible */
-.gallery img.is-visible{
+.gallery img.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* accessibilité */
-@media (prefers-reduced-motion: reduce){
-  .gallery img{
+@media (prefers-reduced-motion: reduce) {
+  .gallery img {
     opacity: 1;
     transform: none;
     transition: none;
   }
 }
 
-/* ========== PAGE TARIFS (slider) ========== */
-
-.tarif-page{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* ========== PAGE TARIFS ========== */
+.tarif-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Conteneur central */
-.tarif-wrapper{
-  position:relative;
-  width:100%;
-  max-width:1050px;
-  margin:0 auto;
-  padding:10px 40px 20px;
+.tarif-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 10px 40px 20px;
 }
 
-/* Slides (portrait / animalier / produits) */
-.tarif-slides{
-  position:relative;
-}
-.tarif-slide{
-  display:none;
-}
-.tarif-slide.active{
-  display:block;
-}
+.tarif-slides { position: relative; }
+.tarif-slide { display: none; }
+.tarif-slide.active { display: block; }
 
-/* Carte centrale */
-.tarif-card{
-  text-align:center;
+.tarif-card { text-align: center; }
+
+.tarif-logo {
+  height: 165px;
+  margin: 0 auto 6px;
+  display: block;
+  transform: translateX(6px);
 }
 
-/* ===== Logo + titres ===== */
+.tarif-header { margin-bottom: 18px; }
 
-.tarif-logo{
-  height:165px;                 /* logo bien visible */
-  margin:0 auto 6px;
-  display:block;
-  transform:translateX(6px);    /* léger décalage à droite pour compenser l’appareil photo */
+.tarif-title {
+  font-family: "Allura", cursive;
+  font-size: 44px;
+  font-weight: 400;
+  margin: 0 0 4px;
 }
 
-.tarif-header{
-  margin-bottom:18px;
+.tarif-sub {
+  font-family: "Allura", cursive;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 18px;
 }
 
-.tarif-title{
-  font-family:"Allura", cursive;
-  font-size:44px;
-  font-weight:400;
-  margin:0 0 4px;
+.tarif-table {
+  max-width: 800px;
+  margin: 0 auto 45px;
+  display: flex;
+  flex-direction: column;
 }
 
-.tarif-sub{
-  font-family:"Allura", cursive;
-  font-size:32px;
-  font-weight:400;
-  margin:0 0 18px;
+.tarif-row {
+  background: rgba(242,239,235,0.9);
+  border-radius: 20px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(0,0,0,0.04);
 }
 
-/* ===== Tableau des tarifs – OPTION C (bloc texte + prix + petite ligne) ===== */
-
-.tarif-table{
-  max-width:800px;              /* un bloc assez étroit → plus lisible */
-  margin:0 auto 45px;
-  display:flex;
-  flex-direction:column;
+.tarif-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-.tarif-row{
-  background:rgba(242,239,235,0.9); /* 👈 plus contrasté */
-  border-radius:20px;
-  padding:18px 20px;
-  margin-bottom:16px; /* 👈 plus d’espace entre les bulles */
+.tarif-left span:first-child { font-weight: 600; font-size: 18px; }
+.tarif-left span:last-child { font-size: 14px; opacity: 0.7; margin-top: 4px; }
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.tarif-price { font-weight: 600; font-size: 18px; }
 
-  box-shadow:
-    0 8px 18px rgba(0,0,0,0.08),
-    inset 0 0 0 1px rgba(0,0,0,0.04);
+.tarif-row:last-child::after { display: none; }
+
+.tarif-extra {
+  max-width: 780px;
+  margin: 14px auto 10px;
 }
 
-/* bloc gauche (titre + description) */
-.tarif-left{
-  display:flex;
-  flex-direction:column;
-  text-align:left;
+.tarif-extra h2 {
+  font-family: "Allura", cursive;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 30px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
-.tarif-left span:first-child{
-  font-weight:600;
-  font-size:18px;
+.tarif-extra h2::before, .tarif-extra h2::after {
+  content: "";
+  flex: 0 0 50px;
+  height: 2px;
+  background: #4d4135;
+  max-width: 80px;
 }
 
-.tarif-left span:last-child{
-  font-size:14px;
-  opacity:0.7;
-  margin-top:4px;
+.tarif-extra ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
-.tarif-price{
-  font-weight:600;
-  font-size:18px;
+.tarif-separator {
+  width: 58%;
+  max-width: 780px;
+  margin: 35px auto 8px;
+  border: none;
+  border-top: 2px solid #4d4135;
 }
 
-/* Pas de ligne après la dernière séance */
-.tarif-row:last-child::after{
-  display:none;
+.tarif-note {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 15px;
+  margin: 0 auto 14px;
 }
 
-/* ===== Suppléments & détails ===== */
-
-.tarif-extra{
-  max-width:780px;
-  margin:14px auto 10px;
+.tarif-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(242,239,235,0.9);
+  border-radius: 999px;
+  border: 1px solid #bab0a4;
+  cursor: pointer;
+  padding: 10px 14px;
+  color: #5a5a5a;
+  font-size: 26px;
+  line-height: 1;
+  z-index: 10;
 }
 
-.tarif-extra h2{
-  font-family:"Allura", cursive;
-  font-size:32px;
-  font-weight:400;
-  margin:30px 0 16px;
+.tarif-arrow.left { left: 2.5vw; }
+.tarif-arrow.right { right: 2.5vw; }
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-}
+.tarif-arrow:hover { color: #222; border-color: #8b7d6d; }
 
-.tarif-extra h2::before,
-.tarif-extra h2::after{
-  content:"";
-  flex:0 0 50px;
-  height:2px;
-  background:#4d4135;
-  max-width:80px;
-}
-
-.tarif-extra ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  font-size:20px;
-  line-height:1.7;
-}
-
-.tarif-extra li{
-  margin:0;
-}
-
-/* Ligne + phrase du bas */
-
-.tarif-separator{
-  width:58%;
-  max-width:780px;
-  margin:35px auto 8px;
-  border:none;
-  border-top:2px solid #4d4135;
-}
-
-.tarif-note{
-  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  font-size:15px;
-  margin:0 auto 14px;
-}
-
-/* ===== Flèches (comme le carrousel d’accueil, mais pour le slider de tarifs) ===== */
-
-.tarif-arrow{
-  position:fixed;                       /* collée au bord de l’écran */
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(242,239,235,0.9);
-  border-radius:999px;
-  border:1px solid #bab0a4;
-  cursor:pointer;
-  padding:10px 14px;
-  color:#5a5a5a;
-  font-size:26px;
-  line-height:1;
-  z-index:10;
-}
-
-.tarif-arrow.left{
-  left:2.5vw;
-}
-.tarif-arrow.right{
-  right:2.5vw;
-}
-
-.tarif-arrow:hover{
-  color:#222;
-  border-color:#8b7d6d;
-}
-
-/* Un tout petit ajustement pour les écrans plus petits */
-@media (max-width:900px){
-  .tarif-table{
-    max-width:100%;
-  }
-}
-@media (max-width:640px){
-  .tarif-row{
-    grid-template-columns:1fr;
-    grid-template-rows:auto auto auto;
-    grid-template-areas:
-      "title"
-      "desc"
-      "price";
-    row-gap:2px;
-  }
-  .tarif-row span:nth-child(3){
-    text-align:left;
-    margin-top:2px;
+@media (max-width:900px) { .tarif-table { max-width: 100%; } }
+@media (max-width:640px) {
+  .tarif-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
 
-/* ========== CONCTACT VARIABLES ========== */
-:root{
-  --bg:#f8f5f2;
-  --text:#4d4135;
+/* ========== PAGE CONTACT (Nettoyée et Uniformisée) ========== */
+.contact-page {
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* ========== RESET ========== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  background:var(--bg);
-  font-family:"Inter", sans-serif;
-}
-
-/* ========== PAGE ========== */
-.contact-page{
-  height:100vh;
-  overflow:hidden;
-}
-
-/* ========== CONTAINER ========== */
-.contact-container{
-  width:1200px;
-  height:100vh;
-
-  margin-left:40px; /* + à gauche */
-
-  display:grid;
+.contact-container {
+  width: 1200px;
+  height: 100vh;
+  margin-left: 40px;
+  display: grid;
   grid-template-columns: 380px 80px 1fr;
-
-  align-items:start;
-  padding-top:20px; /* + haut */
+  align-items: start;
+  padding-top: 20px;
 }
 
-/* ========== GAUCHE ========== */
-.contact-left{
-  display:flex;
-  flex-direction:column;
-}
+.contact-left { display: flex; flex-direction: column; }
 
-/* TITRE */
-.contact-title{
-  font-family:"Allura", cursive;
-  font-size:65px;
-  font-weight:400;
+.contact-title {
+  font-family: "Allura", cursive;
+  font-size: 65px;
+  font-weight: 400;
   margin-top: -65px;
+  color: #4d4135;
 }
 
-/* TRAIT */
-.contact-underline{
-  width:175px;
-  height:2px;
-  background:var(--text);
-  margin-top:-15px;
+.contact-underline {
+  width: 175px;
+  height: 2px;
+  background: #4d4135;
+  margin-top: -15px;
 }
 
-/* INFOS */
-.contact-infos{
-  margin-top:-325px; /* remonte */
-  display:flex;
-  flex-direction:column;
-  gap:65px;
+.contact-infos {
+  margin-top: -325px;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
 }
 
-/* TEXTES */
-.contact-label{
-  font-family:"Allura", cursive;
-  font-size:34px;
+.contact-label {
+  font-family: "Allura", cursive;
+  font-size: 34px;
   line-height: 0.7;
+  color: #4d4135;
 }
 
-.contact-text{
-  font-family:"Allura", cursive;
-  font-size:22px;
-  margin-top:4px;
-  opacity:0.8;
+.contact-text {
+  font-family: "Allura", cursive;
+  font-size: 22px;
+  margin-top: 4px;
+  opacity: 0.8;
+  color: #4d4135;
 }
 
-/* ========== TRAITS ========== */
-.contact-separator{
-  position:relative;
-  height:100%;
+.contact-separator { position: relative; height: 100%; }
+
+.contact-separator .line {
+  position: absolute;
+  top: 55%;
+  width: 2px;
+  height: 65%;
+  background: #4d4135;
 }
 
-.contact-separator .line{
-  position:absolute;
-  top:55%; /* remonte */
-  width:2px;
-  height:65%;
-  background:var(--text);
+.contact-separator .line-a { left: 30px; }
+.contact-separator .line-b { left: 47px; top: 43%; }
+
+.contact-right { display: flex; align-items: flex-start; }
+
+
+/* ========== UNIFICATION TYPEFORM (AVIS + CONTACT) ========== */
+
+.contact-form-wrap, .avis-typeform-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Découpe ce qui dépasse pour cacher les badges */
 }
 
-/* ligne 1 */
-.contact-separator .line-a{
-  left:30px;
+/* Dimensions spécifiques Desktop pour la page Contact */
+.contact-form-wrap {
+  max-width: 650px;
+  height: 75vh;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
-/* ligne 2 (décalage léger) */
-.contact-separator .line-b{
-  left:47px;
-  top:43%; /* léger décalage */
+/* On utilise les pseudo-éléments ::before et ::after pour masquer haut/bas */
+.contact-form-wrap::before, .avis-typeform-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background: var(--bg);
+  z-index: 10;
+  pointer-events: none;
 }
 
-/* ========== DROITE ========== */
-.contact-right{
-  display:flex;
-  align-items:flex-start;
+.contact-form-wrap::after, .avis-typeform-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background: var(--bg);
+  z-index: 10;
+  pointer-events: none;
 }
 
-/* FORMULAIRE */
-.contact-form-wrap{
-  width:100%;
-  max-width:650px;
-  height:75vh;
-
-  margin-left:20px; /* + à droite */
-  margin-top:20px;  /* remonte */
-
-  position:relative;
+/* Éliminer le fond gris Typeform */
+.typeform-embed iframe {
+  border: 0 !important;
+  background: transparent !important;
+  filter: brightness(1.02) contrast(0.98);
 }
 
-/* ===== TYPEFORM FIX CLEAN ===== */
-
-.tf-widget{
-  width:150%;   /* ← important */
-  height:100%;
-}
-
-/* iframe */
-.tf-widget iframe{
-  width:100% !important;
-  height:100% !important;
-  border:0 !important;
-
-  background:var(--bg) !important;
-
-  filter:brightness(1.03) contrast(0.97); /* adoucit le gris */
-}
-
-/* covers propres */
-.tf-cover-top,
-.tf-cover-bottom{
-  position:absolute;
-  left:0;
-  width:100%;
-  background:var(--bg);
-  z-index:2;
-  pointer-events:none;
-}
-
-/* ajustement précis */
-.tf-cover-top{
-  top:0;
-  height:60px;
-  width: 1000px;
-  margin-left: -5px;
-}
-
-.tf-cover-bottom{
-  bottom:0;
-  width: 1000px;
-  height:75px;
-  margin-left: -5px;
-}
-
-:root{
-  --bg:#F2EFEB; /* un chouïa plus chaud */
-}
-
-/* 🔥 ANTI GRIS (IMPORTANT) */
-.contact-right iframe{
-  filter:brightness(1.02) contrast(0.98);
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width:1000px){
-
-  .contact-container{
-    grid-template-columns:1fr;
-    padding:20px;
-    gap:40px;
-    height:auto;
-  }
-
-  .contact-separator{
-    display:none;
-  }
-
-  .contact-left{
-    align-items:center;
-    text-align:center;
-  }
-
-  .contact-infos{
-    margin-top:40px;
-    gap:30px;
-  }
-
-  .contact-form-wrap{
-    margin-left:0;
-    margin-top:20px;
-    height:60vh;
-  }
-}
 
 /* ========== PAGE AVIS ========== */
-
-.avis-body{
-  background: var(--bg, #f3eee7);
-  overflow: auto; /* la page peut scroller */
+.avis-body {
+  background: var(--bg);
+  overflow: auto;
 }
 
-.avis-page{
+.avis-page {
   width: min(92%, 1200px);
   margin: 0 auto;
   padding: 28px 0 60px;
 }
 
-/* --- TITRE centré --- */
-.avis-header{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+.avis-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
-  margin-bottom: 40px; /* + d'espace entre Avis et formulaire */
+  margin-bottom: 40px;
 }
 
-.avis-title{
-  font-family:"Allura", cursive;
-  font-size:55px;       /* comme tes autres titres */
-  font-weight:400;
-  margin:0;
-  line-height:1;
-  text-align:center;
-  color:#4d4135;
+.avis-title {
+  font-family: "Allura", cursive;
+  font-size: 55px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  color: #4d4135;
 }
 
-.avis-underline{
-  width: 113px;        /* plus court */
-  height: 1.9px !important; 
-  background:#4d4135;
-  margin-top: -7px;   /* plus proche du mot */
-  border-radius:2px;
+.avis-underline {
+  width: 113px;
+  height: 1.9px;
+  background: #4d4135;
+  margin-top: -7px;
+  border-radius: 2px;
 }
 
-/* --- FORMULAIRE --- */
-.avis-form-zone{
-  display:flex;
-  justify-content:center;
-  margin: 0 0 80px;   /* beaucoup + d'espace avant "Précédents avis" */
+.avis-form-zone {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 80px;
 }
 
-.avis-typeform-wrap{
+.avis-typeform-wrap {
   width: min(900px, 100%);
 }
 
-/* Typeform: on laisse auto-resize gérer la hauteur (pas de scroll interne) */
-.avis-typeform{
+.avis-typeform {
   width: 100%;
-  min-height: 520px; /* base */
+  min-height: 520px;
 }
 
-/* ========== MASQUES TYPEFORM (haut + bas) ========== */
-.avis-typeform-wrap{
-  position: relative;
-  overflow: hidden; /* important : coupe proprement ce qui dépasse */
-}
-
-/* Masque du haut */
-.avis-typeform-wrap::before{
-  content:"";
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 35px;                 /* ajuste (ex: 16 → 40) */
-  background: var(--bg, #f3eee7);
-  z-index: 9999;
-  pointer-events:none;
-}
-
-/* Masque du bas (cache badge + bas du widget) */
-.avis-typeform-wrap::after{
-  content:"";
-  position:absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 64px;                 /* ajuste (ex: 40 → 90) */
-  background: var(--bg, #f3eee7);
-  z-index: 9999;
-  pointer-events:none;
-}
-
-/* L'iframe doit rester sous les masques */
-.avis-typeform-wrap iframe{
-  position: relative;
-  z-index: 1 !important;
-  border: 0 !important;
-  background: transparent !important;
-}
-
-/* IMPORTANT: on force le widget à ne pas être grisé */
-.avis-form-zone,
-.avis-form-zone *{
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-/* Cache badge Typeform (Avis) */
-.avis-form-zone{
-  position:relative;
-}
-
-/* Bloc cache */
-.avis-form-zone::after{
-  content:"";
-  position:absolute;
-  bottom:18px;          /* ajuste si besoin */
-  right:12px;           /* ajuste si besoin */
-  width:170px;
-  height:38px;
-  background:var(--bg); /* EXACT même couleur que le fond */
-  z-index:5;
-  pointer-events:none;  /* ne bloque pas le formulaire */
-}
-
-.typeform-embed iframe{
-  position:relative;
-  z-index:1;
-}
-
-/* --- PRECEDENTS AVIS --- */
-.avis-prev-zone{
-  margin-top: -25px; /* encore de l’air au-dessus */
+.avis-prev-zone {
+  margin-top: -25px;
   margin-bottom: 25px;
   padding-bottom: 30px;
 }
 
-.avis-prev-title{
-  font-family:"Allura", cursive;
-  font-size:55px;
-  font-weight:400;
-  margin: 0 0 34px;   /* un chouïa + d'espace avant les bulles */
-  text-align:center;
-  color:#4d4135;
+.avis-prev-title {
+  font-family: "Allura", cursive;
+  font-size: 55px;
+  font-weight: 400;
+  margin: 0 0 34px;
+  text-align: center;
+  color: #4d4135;
 }
 
-/* liste */
-.avis-list{
-  display:flex;
-  flex-direction:column;
+.avis-list {
+  display: flex;
+  flex-direction: column;
   gap: 22px;
-  align-items:center;
+  align-items: center;
 }
 
-.avis-loading{
-  font-family:"Allura", cursive;
-  font-size:26px;
-  opacity:0.7;
+.avis-loading {
+  font-family: "Allura", cursive;
+  font-size: 26px;
+  opacity: 0.7;
 }
 
-/* --- BULLES (carrées arrondies) --- */
-.avis-bubble{
+.avis-bubble {
   width: min(900px, 100%);
-  background: rgba(0,0,0,0.045);            /* moins foncé */
-  border: 2px dashed rgba(77,65,53,0.28);   /* contour plus léger */
+  background: rgba(0,0,0,0.045);
+  border: 2px dashed rgba(77,65,53,0.28);
   border-radius: 38px;
-  padding: 16px 22px;                       /* un poil moins d'air */
+  padding: 16px 22px;
 }
 
-/* Ligne Prénom — séance : pas gras, moins foncé */
-.avis-bubble-head{
-  font-family:"Allura", cursive;
-  font-size:34px;      /* un peu moins gros */
-  font-weight:500;     /* pas gras */
-  color:#4d4135;
-  opacity:100;        /* plus doux */
-  margin:0 0 8px;
-  text-align:left;
+.avis-bubble-head {
+  font-family: "Allura", cursive;
+  font-size: 34px;
+  font-weight: 500;
+  color: #4d4135;
+  margin: 0 0 8px;
+  text-align: left;
 }
 
-/* Commentaire */
-.avis-bubble-text{
-  font-family:"Allura", cursive;
-  font-size:26px;
-  color:#4d4135;
-  opacity:0.85;
-  margin:0;
-
-  /* si c'est long : joli */
+.avis-bubble-text {
+  font-family: "Allura", cursive;
+  font-size: 26px;
+  color: #4d4135;
+  opacity: 0.85;
+  margin: 0;
   text-align: justify;
   text-justify: inter-word;
-  overflow-wrap: anywhere; /* évite les mots qui cassent la mise en page */
+  overflow-wrap: anywhere;
 }
 
-/* petit espace en dessous de la dernière bulle */
-.avis-prev-zone::after{
-  content:"";
-  display:block;
-  height: 30px;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 980px){
-  .avis-page{ padding: 18px 0 40px; }
-
-  .avis-title,
-  .avis-prev-title{ font-size:48px; }
-
-  .avis-underline{ width: 160px; }
-
-  .avis-bubble{ padding: 16px 18px; border-radius: 30px; }
-  .avis-bubble-head{ font-size:28px; }
-  .avis-bubble-text{ font-size:24px; }
-}
-
-/* ================= Perf (sans impact visuel) ================= */
-
-/* Le navigateur peut ignorer le rendu des sections hors-écran,
-   ce qui réduit les lags sur pages longues (portfolio). */
-.about,
-.site-footer,
-.gallery,
-.portfolio-page,
-.tarifs-page {
+/* ========== PERFORMANCE ========== */
+.about, .site-footer, .gallery, .portfolio-page, .tarif-page {
   content-visibility: auto;
   contain-intrinsic-size: 900px;
 }
 
-/* Optimise les anims du carrousel (sans changer le rendu) */
 .triptych .track {
   will-change: transform;
   transform: translate3d(0,0,0);
 }
 
-/* Sécurise le rendu images */
-img { max-width: 100%; height: auto; }
+body::-webkit-scrollbar { display: none; }
+body { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Scroll invisible mais fonctionnel */
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.hamburger { display: none; }
+.mobile-menu { display: none; }
+
+
+/* ========== MOBILE GLOBAL RESPONSIVE ========== */
+
+@media (max-width: 1000px) {
+  /* Pour que la page contact defile sur mobile si besoin */
+  .contact-page {
+    height: auto;
+    overflow: auto;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-separator { display: none; }
+  .contact-left { align-items: center; text-align: center; }
+
+  .contact-title {
+    margin-top: 10px;
+  }
+
+  .contact-infos {
+    margin-top: 30px;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-form-wrap {
+    margin-left: 0;
+    margin-top: 20px;
+    height: 550px; /* Donné une hauteur cohérente pour que Typeform vive sur mobile */
+  }
 }
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* =========================
-   HAMBURGER GLOBAL
-========================= */
-
-.hamburger {
-  display: none;
-}
-
-.mobile-menu {
-  display: none;
-}
-
-/* =========================
-   MOBILE ONLY
-========================= */
 
 @media (max-width: 768px) {
 
-  /* HAMBURGER */
+  .nav-top { display: none; }
+
   .hamburger {
     display: flex;
     position: fixed;
@@ -1186,7 +902,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 1000000;
   }
 
   .hamburger span {
@@ -1195,676 +911,86 @@ body::-webkit-scrollbar {
     background-color: #2b2b2b;
     border-radius: 2px;
     display: block;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 
-  /* MENU */
   .mobile-menu {
     display: flex;
     position: fixed;
     inset: 0;
-
     background: rgba(242,239,235,0.9);
     backdrop-filter: blur(5px);
-
     align-items: center;
     justify-content: center;
-
     opacity: 0;
     pointer-events: none;
     transition: 0.3s;
-
-    z-index: 9998;
+    z-index: 999999;
   }
 
-  .mobile-menu nav {
+  .mobile-menu.active { opacity: 1; pointer-events: auto; }
+
+  .mobile-menu nav { display: flex; flex-direction: column; gap: 30px; text-align: center; }
+  .mobile-menu a { font-family: 'Allura', cursive; font-size: 38px; color: #2b2b2b; text-decoration: none; }
+
+  .hero-title { font-size: 1.65em; }
+  .hero-sub { font-size: 1.65em; }
+  .about-title { font-size: 1.65em; }
+  .about-lead { font-size: 1.65em; }
+  .about-text { font-size: 1.50em; }
+
+  .triptych { display: flex; align-items: center; justify-content: center; margin-top: -80px; }
+  .hero { margin-bottom: -30px; }
+
+  .strip { height: 250px; }
+  .track img { width: 100%; height: 100%; object-fit: cover; max-height: 60vh; }
+
+  .footer-cta {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .mobile-menu a {
-    font-family: 'Allura', cursive;
-    font-size: 38px;
-    color: #2b2b2b;
-    text-decoration: none;
-  }
-
-  .mobile-menu.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .nav-top {
-    display: none;
-  }
-
-  .mobile-menu {
-  position: fixed;
-  inset: 0;
-  z-index: 999999; /* ← TRÈS ÉLEVÉ */
-}
-
-.hamburger {
-  position: fixed;
-  z-index: 1000000; /* encore au-dessus */
-}
-
-iframe {
-  position: relative;
-  z-index: 1 !important;
-}
-
-.hamburger span {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-}
-
-@media (max-width: 768px) {
-
-  .hero-title {
-    font-size: 1.65em;
-  }
-
-  .hero-sub {
-    font-size: 1.65em;
-  }
-
-  .about-title {
-    font-size: 1.65em;
-  }
-
-  .about-lead {
-    font-size: 1.65em;
-  }
-
-  .about-text {
-    font-size: 1.50em;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .triptych {
-    position: relative;
-    display: flex;
-    align-items: center; /* ← centre vertical */
     justify-content: center;
-  }
-
-  .strip {
-    display: flex;
-    align-items: center;
-  }
-
-  .track img {
-    height: auto;
-    max-height: 60vh; /* ← réduit un peu la hauteur */
-    object-fit: cover;
-  }
-
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .footer-cta {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: nowrap;
-    padding: 0 10px;
-  }
-
-  .footer-link {
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .footer-link span {
-    white-space: nowrap;
-  }
-
-  .footer-cta {
-  font-size: 0.9em;
-}
-}
-
-@media (max-width: 768px) {
-
-  .track img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* ← REMPLIT le bloc */
-  }
-
-  .strip {
-    height: 250px; /* ajuste selon ton rendu */
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .triptych {
-    margin-top: -80px; /* réduit */
-  }
-
-  .hero {
-    margin-bottom: -30px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .about {
-    padding: 20px;
-  }
-
-  .about-text {
-    line-height: 1.6;
-    margin-top: 40px;
-  }
-
-  .about-lead {
-    margin-bottom: 10px;
-  }
-  .about-text p {
-  margin-bottom: 40px;
-}
-}
-
-@media (max-width: 768px) {
-
-  .footer-cta {
-    display: flex;
-    justify-content: center; /* ← CENTRE */
     align-items: center;
     gap: 20px;
     text-align: center;
-  }
-
-  .footer-link {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .footer-link {
-  flex: none;
-}
-
-.footer-rule {
-  margin-top: 35px;
-}
-}
-
-
-@media (max-width: 768px) {
-
-  .portfolio-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .portfolio-bubble {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  .bubble-image {
-    width: 100%;
-  }
-
-  .bubble-image img {
-    width: 100%;
-    height: auto; /* ← TRÈS IMPORTANT */
-    object-fit: cover;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .portfolio-bubble span {
-    margin-top: 10px;
-    font-size: 25px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .portfolio-page {
-    text-align: center;
-    padding: 20px 10px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .gallery {
-    column-count: 2; /* ← 2 colonnes */
-    column-gap: 9px;
+    flex-wrap: nowrap;
     padding: 0 10px;
+    font-size: 0.9em;
   }
 
-  .gallery img {
-    width: 100%;
-    margin-bottom: 9px;
-    display: block;
-    break-inside: avoid; /* ← IMPORTANT */
-    border-radius: 8px; /* optionnel si tu en as déjà */
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .category-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* ← CENTRE */
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .category-bubble {
-    width: 260px;
-    height: auto;
-    overflow: hidden;
-  }
-
-  .category-bubble img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .category-title {
-    font-size: 35px;
-    margin-top: -7px;
-    margin-bottom: 45px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  /* ===== GLOBAL ===== */
-  .tarif-page{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:flex-start; /* ← IMPORTANT */
-  padding-top: 40px; /* ajuste si besoin */
-}
-
-  .tarif-wrapper{
-    padding: 0 15px;
-  }
-
-  /* ===== LOGO ===== */
-  .tarif-logo{
-    height: 170px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  /* ===== TITRES ===== */
-  .tarif-title{
-    font-size: 35px;
-    margin-bottom: 2px;
-  }
-
-  .tarif-sub{
-    font-size: 25px;
-    margin-bottom: 30px;
-  }
-
-  /* ===== TABLE ===== */
-  .tarif-table{
-    gap: 12px;
-    margin-top: 25px;
-    margin-bottom: 45px;
-  }
-
-  .tarif-row{
-    padding: 14px 16px;
-    border-radius: 18px;
-  }
-
-  .tarif-left span:first-child{
-    font-size: 16px;
-  }
-
-  .tarif-left span:last-child{
-    font-size: 13px;
-  }
-
-  .tarif-price{
-    font-size: 16px;
-  }
-
-  /* ===== SUPPLÉMENTS ===== */
-  .tarif-extra{
-    margin-top: 25px;
-  }
-
-  .tarif-extra h2{
-    font-size: 25px;
-    margin-bottom: 10px;
-    gap: 10px;
-  }
-
-  /* TRAITS À CÔTÉ (fix + raccourcis) */
-  .tarif-extra h2::before,
-  .tarif-extra h2::after{
-    flex: 0 0 35px; /* ← PLUS COURT */
-    height: 2px !important;  /* ← FIN (plus de bug gras) */
-    background: #3f342a;
-  }
-
-  .tarif-extra ul{
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  /* ===== TRAIT BAS ===== */
-  .tarif-separator{
-    width: 80%;
-    height: 2px !important;
-    background: #3f342a;
-    border: none;
-    margin: 25px auto 10px;
-  }
-
-  .tarif-note{
-    font-size: 12px;
-    max-width: 340px;
-  }
-
-  /* ===== FLÈCHES ===== */
-  .tarif-arrow{
-    position: absolute;
-    top: 240px; /* ← PARFAITEMENT aligné avec ton image */
-
-    padding: 10px 13px;
-    border-radius: 999px;
-    border: 1px solid #bab0a4;
-    background: rgba(242,239,235,0.95);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  .tarif-arrow svg{
-    width: 17px;
-    height: 17px;
-  }
-
-  .tarif-arrow.left{
-    left: 25px;
-  }
-
-  .tarif-arrow.right{
-    right: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  /* ===== PAGE ===== */
-  .contact-page {
-    min-height: 100vh;
-    overflow: auto;
-  }
-
-  /* ===== CONTAINER ===== */
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    height: auto;
-
-    margin: 0;              /* 🔥 reset du margin-left desktop */
-    padding: 11px 0px 0px; /* 🔥 aligné avec hamburger */
-
-    gap: 25px;
-  }
-
-  /* ===== ORDRE ===== */
-  .contact-left   { order: 1; }
-  .contact-right  { order: 2; }
-  .contact-infos  { order: 3; }
-
-  /* ===== TITRE ===== */
-  .contact-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-
-  .contact-title {
-    font-size: 40px;
-    margin: 0;
-  }
-
-  .contact-underline {
-    margin: -11px auto 0;
-    width: 115px;
-  }
-
-  /* ===== FORMULAIRE ===== */
-  .contact-right {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .contact-form-wrap {
-    width: 100%;
-    max-width: 500px;
-    height: 58vh;
-
-    margin: 0;
-  }
-
-  /* 🔥 FIX TYPEFORM */
-  .tf-widget {
-    width: 100%; /* ← IMPORTANT */
-  }
-
-  /* ===== FIX COVERS MOBILE (ULTRA IMPORTANT) ===== */
-.tf-cover-top,
-.tf-cover-bottom {
-  width: 100%;       /* 🔥 au lieu de 1000px */
-  margin-left: 0;    /* 🔥 enlève le décalage */
-}
-
-.tf-cover-top {
-  height: 45px;  /* un peu plus propre mobile */
-}
-
-.tf-cover-bottom {
-  height: 80px;  /* moins envahissant */
-  bottom: 18px;  /* remonte légèrement */
-}
-
-
-  /* ===== INFOS ===== */
-  .contact-infos {
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-start;
-    text-align: left;
-
-    gap: 18px;
-
-    width: 100%;
-    max-width: 500px;
-    
-    margin: 0 auto;
-    padding-left: 30px; /* 🔥 micro alignement avec hamburger */
-    z-index: 3; /* 🔥 au-dessus des covers */
-    margin-top: -5px;
-  }
-
-  .contact-label {
-    font-size: 25px;
-  }
-
-  .contact-text {
-    font-size: 16px;
-  }
-
-  .contact-infos {
-  position: relative;
-}
-
-/* TRAITS DÉCORATIFS */
-.contact-infos::before,
-.contact-infos::after {
-  content: "";
-  position: absolute;
-  left: 0;
-
-  height: 2px;
-  background: var(--text);
-  
-}
-
-/* trait 1 */
-.contact-infos::before {
-  top: -94px;
-  width: 105px;
-}
-
-/* trait 2 (légèrement décalé) */
-.contact-infos::after {
-  top: -82px;
-  width: 85px;
-}
-.contact-infos {
-  position: relative;
-  z-index: 3; /* 🔥 au-dessus des covers */
-}
-}
-
-@media (max-width: 768px) {
-
-  /* ===== PAGE ===== */
-  .avis-page {
-    width: 100%;
-    padding: 80px 10px 60px; /* 🔥 remonte et aère */
-  }
-
-  /* ===== TITRE ===== */
-  .avis-header {
-    margin-top: 0;
-    margin-bottom: 30px;
-  }
-
-  .avis-title {
-    font-size: 40px;
-  }
-
-  .avis-underline {
-    width: 85px;
-    margin-top: -6px;
-  }
-
-  /* ===== FORMULAIRE ===== */
-  .avis-form-zone {
-    margin-bottom: 60px;
-  }
-
-  .avis-typeform-wrap {
-    width: 100%;
-    max-width: none; /* 🔥 enlève la limite */
-  }
-
-  /* covers plus propres mobile */
-  .avis-typeform-wrap::before {
-    height: 30px;
-    overflow: hidden;
-  }
-
-  .avis-typeform-wrap::after {
-    width: 100%;
-    height: 110px;
-    bottom: 20px;
-    overflow: hidden;
-  }
-
-  /* ===== PRECEDENTS AVIS ===== */
-  .avis-prev-title {
-    font-size: 38px;
-    margin-top: -100px;
-    margin-bottom: 35px;
-  }
-
-  .avis-list {
-    gap: 18px;
-  }
-
-  .avis-prev-zone {
-  position: relative;
-  z-index: 10000; /* 🔥 au-dessus du cover */
-  }
-
-  /* ===== BULLES ===== */
-  .avis-bubble {
-    width: 95%;
-    padding: 14px 16px;
-    border-radius: 26px; /* 🔥 plus compact */
-  }
-
-  .avis-bubble-head {
-    font-size: 26px;
-    margin-bottom: 6px;
-  }
-
-  .avis-bubble-text {
-    font-size: 22px;
-    line-height: 1.5;
-  }
-
+  .footer-link { font-size: 13px; display: flex; align-items: center; gap: 5px; flex: none; }
+  .footer-link span { white-space: nowrap; }
+
+  .footer-rule { margin-top: 35px; }
+
+  .about { padding: 20px; }
+  .about-text { line-height: 1.6; margin-top: 40px; }
+  .about-lead { margin-bottom: 10px; }
+  .about-text p { margin-bottom: 40px; }
+
+  .portfolio-grid { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+  .portfolio-bubble { width: 80%; max-width: 300px; }
+  .bubble-image { width: 100%; }
+  .bubble-image img { width: 100%; height: auto; object-fit: cover; }
+  .portfolio-bubble span { margin-top: 10px; font-size: 25px; }
+  .portfolio-page { text-align: center; padding: 20px 10px; }
+
+  .gallery { column-count: 2; column-gap: 9px; padding: 0 10px; }
+  .gallery img { width: 100%; margin-bottom: 9px; display: block; break-inside: avoid; border-radius: 8px; }
+
+  .category-header { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin-bottom: 20px; }
+  .category-bubble { width: 260px; height: auto; overflow: hidden; }
+  .category-bubble img { width: 100%; height: auto; object-fit: cover; display: block; }
+  .category-title { font-size: 35px; margin-top: -7px; margin-bottom: 45px; }
+
+  .tarif-page { align-items: flex-start; padding-top: 40px; }
+  .tarif-wrapper { padding: 0 15px; }
+  .tarif-logo { height: 170px; margin-top: 20px; margin-bottom: 10px; }
+  .tarif-title { font-size: 35px; }
+
+  .avis-page { padding: 18px 0 40px; }
+  .avis-title, .avis-prev-title { font-size: 48px; }
+  .avis-underline { width: 160px; }
+  .avis-bubble { padding: 16px 18px; border-radius: 30px; }
+  .avis-bubble-head { font-size: 28px; }
+  .avis-bubble-text { font-size: 24px; }
 }

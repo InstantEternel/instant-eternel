@@ -1670,8 +1670,8 @@ iframe {
   }
 
    /* ===== ORDRE ===== */
-  .contact-left   { order: 1; }
-  .contact-right  { order: 2; }
+  .contact-left   { order: 2; }
+  .contact-right  { order: 1; }
   .contact-infos  { order: 3; }
 
   /* ==================================

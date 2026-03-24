@@ -1647,7 +1647,7 @@ iframe {
 
 @media (max-width: 768px) {
   /* ==================================
-     1. GLOBAL PAGE & CONTAINER
+     1. GLOBAL PAGE & CONTAINER (Autoritaire)
      ================================== */
   .contact-page {
     height: auto !important;
@@ -1660,14 +1660,13 @@ iframe {
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
-    /* Un peu d'espace en haut pour le hamburger */
     padding: 60px 0 40px !important;
     margin: 0 !important;
     gap: 0 !important;
   }
 
   /* ==================================
-     2. TITRE "CONTACT" (Calage Précis)
+     2. TITRE "CONTACT" (Calage)
      ================================== */
   .contact-left {
     width: 100% !important;
@@ -1691,7 +1690,7 @@ iframe {
   }
 
   /* ==================================
-     3. LE QUESTIONNAIRE (Position & Covers)
+     3. LE QUESTIONNAIRE (Position & Centrage horizontal)
      ================================== */
   .contact-right {
     display: block !important;
@@ -1706,6 +1705,15 @@ iframe {
     position: relative !important;
     z-index: 5 !important;
     overflow: hidden !important; /* Pour que les covers coupent proprement */
+  }
+
+  /* Centrage horizontal du contenu de Typeform */
+  .tf-widget {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
   }
 
   /* Forçage de la transparence de l'iframe */

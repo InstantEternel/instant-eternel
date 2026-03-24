@@ -1664,7 +1664,7 @@ iframe {
   .contact-left {
     order: 1 !important; /* Force la 1ère position */
     width: 100% !important;
-    margin-bottom: 60px !important;
+    margin-bottom: -105px !important;
     text-align: center !important;
   }
   .contact-title {
@@ -1672,8 +1672,8 @@ iframe {
     display: inline-block !important;
   }
   .contact-underline {
-    margin: -17px auto 0 !important; /* Espace ajusté entre mot et trait */
-    width: 150px !important;
+    margin: -16px auto 0 !important; /* Espace ajusté entre mot et trait */
+    width: 145px !important;
     height: 2px !important;
     background: var(--text) !important;
   }
@@ -1688,7 +1688,8 @@ iframe {
     /* Crée un contexte de centrage pour le wrap */
     display: flex !important;
     justify-content: center !important; 
-    margin-top: 50px !important;
+    margin-top: 90px !important;
+    margin-bottom: 60px;
   }
   
   .contact-form-wrap {
@@ -1757,13 +1758,13 @@ iframe {
   }
 
   .contact-separator .line-a { 
-    width: 120px !important; 
+    width: 130px !important; 
     top: 9px !important; 
   }
 
   .contact-separator .line-b { 
-    width: 90px !important; 
-    top: 20px !important; 
+    width: 100px !important; 
+    top: 21px !important; 
   }
 
   /* --- 4. LES INFOS (Tout en bas) --- */
@@ -1778,7 +1779,6 @@ iframe {
   
   /* --- MASQUES (Covers) --- */
   .tf-cover-top { height: 30px !important; top: 0; background: var(--bg) !important; z-index: 10; }
-  .tf-cover-bottom { height: 50px !important; bottom: 0; background: var(--bg) !important; z-index: 10; }
 }
 
 @media (max-width: 768px) {

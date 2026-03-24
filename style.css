@@ -1781,6 +1781,9 @@ iframe {
   .tf-cover-top { height: 30px !important; top: 0; background: var(--bg) !important; z-index: 10; }
 }
 
+
+
+@media (max-width: 768px) {
  /* ===== PAGE ===== */
 
   .avis-page {
@@ -1940,3 +1943,4 @@ iframe {
     line-height: 1.5;
 
   }
+}

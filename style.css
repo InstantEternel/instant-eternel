@@ -1664,7 +1664,7 @@ iframe {
   .contact-left {
     order: 1 !important; /* Force la 1ère position */
     width: 100% !important;
-    margin-bottom: 40px !important;
+    margin-bottom: 60px !important;
     text-align: center !important;
   }
   .contact-title {
@@ -1672,7 +1672,7 @@ iframe {
     display: inline-block !important;
   }
   .contact-underline {
-    margin: -20px auto 0 !important; /* Espace ajusté entre mot et trait */
+    margin: -17px auto 0 !important; /* Espace ajusté entre mot et trait */
     width: 150px !important;
     height: 2px !important;
     background: var(--text) !important;
@@ -1688,7 +1688,7 @@ iframe {
     /* Crée un contexte de centrage pour le wrap */
     display: flex !important;
     justify-content: center !important; 
-    margin: 10px 0 !important;
+    margin-top: 50px !important;
   }
   
   .contact-form-wrap {

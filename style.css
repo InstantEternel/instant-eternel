@@ -1645,134 +1645,84 @@ iframe {
   }
 }
 
+/* ========== CONTACT MOBILE REVISITÉ ========== */
 @media (max-width: 768px) {
 
-  /* ===== PAGE ===== */
+  /* 1. On libère la hauteur de la page pour pouvoir scroller */
   .contact-page {
     height: auto !important;
-    overflow: visible !important;
+    min-height: 100vh;
+    overflow-y: auto !important;
+    display: block; /* On repasse en flux normal */
   }
 
-  /* ===== CONTAINER ===== */
- display: flex;
+  /* 2. On réaligne le container en colonne simple */
+  .contact-container {
+    display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 80px 20px 40px; /* Espace pour le header mobile */
+    padding: 100px 20px 40px; /* Espace pour le menu hamburger */
+    gap: 0;
   }
 
-  /* ===== ORDRE ===== */
-  .contact-left   { order: 1; }
-  .contact-right  { order: 2; }
-  .contact-infos  { order: 3; }
-
-  /* ===== TITRE ===== */
+  /* 3. Titre et souligné centrés */
   .contact-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     width: 100%;
+    margin-bottom: 30px;
   }
-
   .contact-title {
     margin-top: 0;
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
   }
-
- .contact-underline {
-    margin: -10px auto 30px;
+  .contact-underline {
+    margin: -10px auto 0;
+    width: 140px;
   }
 
-  /* ===== FORMULAIRE ===== */
+  /* 4. On cache les traits séparateurs (inutiles sur mobile) */
+  .contact-separator {
+    display: none;
+  }
+
+  /* 5. Le Formulaire (Typeform) */
   .contact-right {
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
-
- .contact-form-wrap {
+  .contact-form-wrap {
     width: 100%;
     max-width: 100%;
-    height: 550px; /* Hauteur fixe pour que le widget respire */
+    height: 550px; /* Hauteur suffisante pour voir les questions */
     margin: 20px 0;
+    border: none;
   }
 
-  /* 🔥 FIX TYPEFORM */
-  .tf-widget {
-    width: 100%; /* ← IMPORTANT */
-  }
-.tf-widget iframe, 
+  /* Suppression des filtres qui changent la couleur */
+  .tf-widget iframe, 
   .contact-right iframe {
     filter: none !important; 
     background: transparent !important;
   }
-  
-  /* ===== FIX COVERS MOBILE (ULTRA IMPORTANT) ===== */
-.tf-cover-top,
-.tf-cover-bottom {
-  width: 100%;       /* 🔥 au lieu de 1000px */
-  margin-left: 0;    /* 🔥 enlève le décalage */
-}
 
-.tf-cover-top {
-  height: 45px;  /* un peu plus propre mobile */
-}
-
-.tf-cover-bottom {
-  height: 80px;  /* moins envahissant */
-  bottom: 18px;  /* remonte légèrement */
-}
-
-
-  /* ===== INFOS ===== */
- .contact-infos {
-    margin-top: 40px;
-    text-align: center;
-    gap: 30px;
+  /* On retire les masques qui peuvent bloquer le clic sur mobile */
+  .tf-cover-top, .tf-cover-bottom {
+    display: none;
   }
 
-  .contact-label {
-    font-size: 25px;
-  }
-
-  .contact-text {
-    font-size: 16px;
-  }
-
+  /* 6. Les infos (Facebook, Insta, Mail) en bas de page */
   .contact-infos {
-  position: relative;
-}
-
-/* TRAITS DÉCORATIFS */
-.contact-infos::before,
-.contact-infos::after {
-  content: "";
-  position: absolute;
-  left: 0;
-
-  height: 2px;
-  background: var(--text);
-  
-}
-
-/* trait 1 */
-.contact-infos::before {
-  top: -94px;
-  width: 105px;
-}
-
-/* trait 2 (légèrement décalé) */
-.contact-infos::after {
-  top: -82px;
-  width: 85px;
-}
-.contact-infos {
-  position: relative;
-  z-index: 3; /* 🔥 au-dessus des covers */
-}
+    margin-top: 20px;
+    text-align: center;
+    gap: 25px;
+  }
+  .contact-label {
+    font-size: 28px;
+  }
+  .contact-text {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 768px) {

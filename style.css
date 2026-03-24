@@ -1873,16 +1873,3 @@ iframe {
 
 }
 
-@media (max-width: 768px){
-
-  .tf-widget{
-    width: 100% !important;
-    height: 100%;
-  }
-
-  .tf-widget iframe{
-    width: 100% !important;
-    height: 100% !important;
-  }
-
-}

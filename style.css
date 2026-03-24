@@ -1679,7 +1679,7 @@ iframe {
     display: block !important;
   }
   .contact-title {
-    margin-top: 0 !important;
+    margin-top: -15 !important;
     font-size: 50px !important;
     line-height: 1 !important;
     display: inline-block !important; /* Pour centrer le souligné */
@@ -1687,7 +1687,7 @@ iframe {
   }
   .contact-underline {
     /* AJUSTEMENT ICI : Augmente le chiffre négatif pour coller, diminue pour éloigner */
-    margin: -15px auto 0 !important; /* -15px pour laisser un peu d'air */
+    margin: -30px auto 0 !important; /* -15px pour laisser un peu d'air */
     width: 120px !important;
     height: 2px !important;
     background: var(--text) !important;

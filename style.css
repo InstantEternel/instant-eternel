@@ -1646,176 +1646,85 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  /* ==================================
-     1. GLOBAL PAGE & CONTAINER
-     ================================== */
   .contact-page {
     height: auto !important;
     min-height: 100vh !important;
-    overflow-y: auto !important;
     display: block !important;
-    position: relative !important;
   }
 
   .contact-container {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column !important; /* Tout s'empile verticalement */
     width: 100% !important;
-    /* Aligne tout à gauche par défaut pour caler les traits */
-    align-items: flex-start !important; 
-    /* Espace en haut pour remonter "Contact" */
-    padding: 30px 0 40px !important; 
+    padding: 20px 0 40px !important; /* On remonte "Contact" très haut */
     margin: 0 !important;
-    gap: 0 !important;
   }
 
-   /* ===== ORDRE ===== */
-  .contact-left   { order: 2; }
-  .contact-right  { order: 1; }
-  .contact-infos  { order: 3; }
-
-  /* ==================================
-     2. TITRE "CONTACT" (Calage Précis)
-     ================================== */
+  /* --- 1. TITRE "CONTACT" (Tout en haut au milieu) --- */
   .contact-left {
+    order: 1 !important; /* Force la 1ère position */
     width: 100% !important;
-    margin-bottom: 30px !important; /* Espace sous le titre */
-    text-align: center !important; /* Centre le titre */
-    display: block !important;
+    margin-bottom: 40px !important;
+    text-align: center !important;
   }
   .contact-title {
-    margin-top: -20 !important;
-    font-size: 50px !important;
-    line-height: 1 !important;
-    display: inline-block !important; /* Pour centrer le souligné */
-    color: var(--text) !important;
+    font-size: 55px !important;
+    display: inline-block !important;
   }
   .contact-underline {
-    /* AJUSTEMENT ICI : Augmente le chiffre négatif pour coller, diminue pour éloigner */
-    margin: -11px auto 0 !important; /* -15px pour laisser un peu d'air */
-    width: 140px !important;
+    margin: -12px auto 0 !important; /* Espace ajusté entre mot et trait */
+    width: 130px !important;
     height: 2px !important;
     background: var(--text) !important;
-    display: block !important;
   }
 
-  /* ==================================
-     3. LE QUESTIONNAIRE (La Méthode Radicale)
-     ================================== */
+  /* --- 2. LE QUESTIONNAIRE (Au milieu) --- */
   .contact-right {
-    display: block !important;
+    order: 2 !important; /* Force la 2ème position */
     width: 100% !important;
-    /* Crée un contexte de centrage pour le wrap */
     display: flex !important;
-    justify-content: center !important; 
-    margin: 10px 0 !important;
+    justify-content: center !important;
   }
-  
   .contact-form-wrap {
-    /* On force une largeur fixe plus petite pour mobile pour éviter le débordement */
-    width: 90% !important; 
-    max-width: 350px !important; /* Largeur max pour qu'il reste petit au milieu */
-    
-    /* Hauteur pour mobile */
-    height: 420px !important; 
-    
-    /* Centré horizontalement dans .contact-right */
-    margin: 0 auto !important; 
-    
+    width: 90% !important;
+    max-width: 350px !important; /* Évite qu'il ne déborde à droite */
+    height: 420px !important;
     position: relative !important;
-    z-index: 5 !important;
-    overflow: hidden !important; /* Pour les covers */
-    border: none !important;
-    background: transparent !important;
+    margin: 0 auto !important;
   }
 
-  /* Force le contenu de Typeform à s'adapter à la largeur du wrap */
-  .tf-widget {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-
-  .tf-widget iframe {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    background: transparent !important;
-    filter: none !important; /* Supprime le gris */
-  }
-
-  /* MASQUES (Covers) Mobile Précis */
-  .tf-cover-top { 
-    height: 30px !important; 
-    top: 0 !important; 
-    left: 0 !important;
-    width: 100% !important;
-    background: var(--bg) !important; 
-    z-index: 10 !important;
-  }
-  .tf-cover-bottom { 
-    height: 50px !important; 
-    bottom: 0 !important; 
-    left: 0 !important;
-    width: 100% !important;
-    background: var(--bg) !important; 
-    z-index: 10 !important;
-  }
-
-  /* ==================================
-     4. LES DEUX TRAITS (Milieu de page)
-     ================================== */
-  /* J'ai supprimé l'ordre flex pour forcer le placement en bas */
+  /* --- 3. LES DEUX TRAITS (En dessous du questionnaire) --- */
   .contact-separator {
+    order: 3 !important; /* Force la 3ème position */
     display: block !important;
     width: 100% !important;
     height: 40px !important;
     position: relative !important;
-    /* Espace entre le questionnaire (haut) et les infos (bas) */
-    margin: 60px 0 30px !important; 
-    /* Calage précis du bord gauche pour aligner avec les infos */
-    padding-left: 20px !important; 
+    margin: 20px 0 !important;
+    padding-left: 20px !important;
   }
   .contact-separator .line {
     position: absolute !important;
     height: 2px !important;
-    width: 120px !important;
     background: var(--text) !important;
-    left: 20px !important; /* Aligné à gauche */
+    left: 20px !important;
   }
-  .contact-separator .line-a { 
-    top: 10px !important; 
-  }
-  .contact-separator .line-b { 
-    top: 20px !important; 
-    width: 90px !important; /* Légèrement plus courte */
-  }
+  .contact-separator .line-a { width: 120px !important; top: 10px !important; }
+  .contact-separator .line-b { width: 90px !important; top: 20px !important; }
 
-  /* ==================================
-     5. LES INFOS (Bas de page)
-     ================================== */
+  /* --- 4. LES INFOS (Tout en bas) --- */
   .contact-infos {
+    order: 4 !important; /* Force la 4ème position */
     display: flex !important;
     flex-direction: column !important;
     gap: 25px !important;
-    text-align: left !important;
-    /* Aligné avec les deux traits séparateurs */
     padding-left: 20px !important;
-    margin-top: 0 !important;
-    width: 100% !important;
+    text-align: left !important;
   }
-  .contact-label { 
-    font-size: 30px !important; 
-    line-height: 1 !important;
-    color: var(--text) !important;
-  }
-  .contact-text { 
-    font-size: 18px !important; 
-    margin-top: 5px !important;
-    color: var(--text) !important;
-    opacity: 0.8 !important;
-  }
+  
+  /* --- MASQUES (Covers) --- */
+  .tf-cover-top { height: 30px !important; top: 0; background: var(--bg) !important; z-index: 10; }
+  .tf-cover-bottom { height: 50px !important; bottom: 0; background: var(--bg) !important; z-index: 10; }
 }
 
 @media (max-width: 768px) {

@@ -1711,6 +1711,10 @@ iframe {
     width: 100%; /* ← IMPORTANT */
   }
 
+  .contact-typeform{
+  width: 100%;
+  min-height: 500px;
+}
   /* ===== FIX COVERS MOBILE (ULTRA IMPORTANT) ===== */
 .tf-cover-top,
 .tf-cover-bottom {
@@ -1873,7 +1877,7 @@ iframe {
 
   .tf-widget{
     width: 100% !important;
-    height: 520px !important;
+    height: 100%;
   }
 
   .tf-widget iframe{

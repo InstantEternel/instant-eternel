@@ -11,9 +11,13 @@
 <body class="contact-page">
 
 <header class="site-header">
+
   <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+
   <div class="mobile-menu" id="mobileMenu">
     <nav>
       <a href="index.html">Accueil</a>
@@ -22,46 +26,50 @@
       <a href="avis.html">Avis</a>
     </nav>
   </div>
+
 </header>
 
 <main class="contact-container">
-  
-  <div class="contact-left-side">
-    <section class="contact-header-zone">
+
+  <!-- TITRE -->
+  <section class="contact-left">
+    <div>
       <h1 class="contact-title">Contact</h1>
       <div class="contact-underline"></div>
-    </section>
+    </div>
+  </section>
 
-    <section class="contact-infos">
-      <div class="info-block">
-        <p class="contact-label">Facebook</p>
-        <p class="contact-text">Instant Éternel</p>
-      </div>
-      <div class="info-block">
-        <p class="contact-label">Instagram</p>
-        <p class="contact-text">brique__chloe_photographe</p>
-      </div>
-      <div class="info-block">
-        <p class="contact-label">Mail</p>
-        <p class="contact-text">brique.chloe.photographe@gmail.com</p>
-      </div>
-    </section>
-  </div>
-
+  <!-- SÉPARATEUR -->
   <div class="contact-separator">
     <div class="line line-a"></div>
     <div class="line line-b"></div>
   </div>
 
-  <section class="contact-right-side">
+  <!-- FORMULAIRE -->
+  <section class="contact-right">
     <div class="contact-form-wrap">
-      <div 
-        class="typeform-embed" 
-        data-tf-widget="kdTcxvpf"
-        data-tf-opacity="100"
-        data-tf-transparent="true"
-        data-tf-auto-resize="true">
-      </div>
+      <div class="tf-cover-top"></div>
+      <div class="tf-cover-bottom"></div>
+
+      <div class="tf-widget" data-tf-widget="kdTcxvpf"></div>
+    </div>
+  </section>
+
+  <!-- INFOS (déplacées ici) -->
+  <section class="contact-infos">
+    <div>
+      <p class="contact-label">Facebook</p>
+      <p class="contact-text">Instant Éternel</p>
+    </div>
+
+    <div>
+      <p class="contact-label">Instagram</p>
+      <p class="contact-text">brique__chloe_photographe</p>
+    </div>
+
+    <div>
+      <p class="contact-label">Mail</p>
+      <p class="contact-text">brique.chloe.photographe@gmail.com</p>
     </div>
   </section>
 
@@ -69,5 +77,6 @@
 
 <script src="https://embed.typeform.com/next/embed.js"></script>
 <script src="script.js" defer></script>
+
 </body>
 </html>

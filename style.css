@@ -1646,9 +1646,12 @@ iframe {
 }
 
 @media (max-width: 768px) {
+  /* ==================================
+     1. GLOBAL PAGE & CONTAINER
+     ================================== */
   .contact-page {
     height: auto !important;
-    min-height: 100vh;
+    min-height: 100vh !important;
     overflow-y: auto !important;
     display: block !important;
   }
@@ -1657,92 +1660,128 @@ iframe {
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
-    padding: 40px 20px 40px !important; /* Un peu plus haut */
+    /* Un peu d'espace en haut pour le hamburger */
+    padding: 60px 0 40px !important;
     margin: 0 !important;
     gap: 0 !important;
   }
 
-  /* --- TITRE ET SOULIGNÉ --- */
+  /* ==================================
+     2. TITRE "CONTACT" (Calage Précis)
+     ================================== */
   .contact-left {
     width: 100% !important;
     margin-bottom: 30px !important;
-    text-align: center;
+    text-align: center !important;
+    display: block !important;
   }
   .contact-title {
     margin-top: 0 !important;
     font-size: 55px !important;
     line-height: 1 !important;
+    display: inline-block !important; /* Pour centrer le souligné */
   }
   .contact-underline {
-    margin: -25px auto 0 !important; /* Remonte la ligne sous le mot */
-    width: 130px;
-    height: 2px;
-    background: var(--text);
+    /* Ajustement précis de la hauteur de la ligne sous le mot */
+    margin: -18px auto 0 !important; /* -18px colle parfaitement sans chevaucher */
+    width: 130px !important;
+    height: 2px !important;
+    background: var(--text) !important;
+    display: block !important;
   }
 
-  /* --- LE QUESTIONNAIRE --- */
+  /* ==================================
+     3. LE QUESTIONNAIRE (Position & Covers)
+     ================================== */
+  .contact-right {
+    display: block !important;
+    width: 100% !important;
+  }
   .contact-form-wrap {
     width: 100% !important;
-    height: 420px !important; 
-    margin: 10px 0 !important;
-    position: relative;
-    z-index: 5;
+    /* Hauteur idéale pour mobile */
+    height: 450px !important; 
+    /* Centré horizontalement */
+    margin: 0 auto !important; 
+    position: relative !important;
+    z-index: 5 !important;
+    overflow: hidden !important; /* Pour que les covers coupent proprement */
   }
 
-  .tf-widget {
+  /* Forçage de la transparence de l'iframe */
+  .tf-widget iframe {
+    background: transparent !important;
+    filter: none !important; /* On supprime tes filtres brightness qui grisent */
+  }
+
+  /* MASQUES (Covers) Mobile Précis */
+  .tf-cover-top { 
+    height: 30px !important; 
+    top: 0 !important; 
+    left: 0 !important;
     width: 100% !important;
-    height: 100% !important;
+    background: var(--bg) !important; 
+    z-index: 10 !important;
+  }
+  .tf-cover-bottom { 
+    height: 50px !important; 
+    bottom: 0 !important; 
+    left: 0 !important;
+    width: 100% !important;
+    background: var(--bg) !important; 
+    z-index: 10 !important;
   }
 
-  /* --- LES DEUX TRAITS (Horizontaux sur mobile) --- */
+  /* ==================================
+     4. LES DEUX TRAITS (Milieu de page)
+     ================================== */
+  /* On replace le séparateur APRES le questionnaire */
   .contact-separator {
     display: block !important;
-    height: 30px !important;
-    position: relative;
-    margin: 15px 0 !important;
+    width: 100% !important;
+    height: 40px !important;
+    position: relative !important;
+    /* Espace entre le questionnaire (en haut) et les infos (en bas) */
+    margin: 30px 0 !important;
+    padding-left: 20px !important; /* Décale les traits du bord de l'écran */
   }
   .contact-separator .line {
-    position: absolute;
+    position: absolute !important;
     height: 2px !important;
     width: 120px !important;
-    background: var(--text);
-    left: 0;
+    background: var(--text) !important;
+    left: 20px !important; /* Calage précis du bord gauche */
   }
-  .contact-separator .line-a { top: 10px; }
+  /* Ligne du haut du séparateur */
+  .contact-separator .line-a { 
+    top: 10px !important; 
+  }
+  /* Ligne du bas du séparateur */
   .contact-separator .line-b { 
-    top: 20px; 
-    width: 100px !important; 
+    top: 20px !important; 
+    width: 100px !important; /* Légèrement plus courte */
   }
 
-  /* --- LES INFOS --- */
+  /* ==================================
+     5. LES INFOS (Bas de page)
+     ================================== */
   .contact-infos {
-    margin-top: 10px !important;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 25px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    text-align: left !important;
+    /* Aligné avec les deux traits séparateurs */
+    padding-left: 20px !important;
+    margin-top: 0 !important;
   }
   .contact-label { 
     font-size: 32px !important; 
     line-height: 1 !important;
   }
   .contact-text { 
-    font-size: 19px !important; 
+    font-size: 20px !important; 
     margin-top: 5px !important;
-  }
-
-  /* --- LES COVERS (Masques) --- */
-  .tf-cover-top { 
-    height: 40px !important; 
-    top: 0; 
-    background: var(--bg) !important; 
-    z-index: 10;
-  }
-  .tf-cover-bottom { 
-    height: 50px !important; 
-    bottom: 0; 
-    background: var(--bg) !important; 
-    z-index: 10;
+    color: var(--text) !important;
   }
 }
 

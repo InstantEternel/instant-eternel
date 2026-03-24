@@ -1682,6 +1682,7 @@ iframe {
      3. LE QUESTIONNAIRE (La Méthode Radicale)
      ================================== */
   .contact-right {
+    order: 2 !important; /* Force la 2ème position */
     display: block !important;
     width: 100% !important;
     /* Crée un contexte de centrage pour le wrap */
@@ -1749,7 +1750,7 @@ iframe {
     width: 100% !important;
     height: 40px !important;
     position: relative !important;
-    margin: 20px 0 !important;
+    margin: 50px 0 !important;
     padding-left: 20px !important;
   }
   .contact-separator .line {

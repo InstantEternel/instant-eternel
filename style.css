@@ -1781,94 +1781,146 @@ iframe {
   .tf-cover-top { height: 30px !important; top: 0; background: var(--bg) !important; z-index: 10; }
 }
 
-@media (max-width: 768px) {
-  /* ===== PAGE ===== */
+ /* ===== PAGE ===== */
+
   .avis-page {
-    width: 100% !important;
-    padding: 40px 10px 60px !important; /* Remonté pour mobile */
+
+    width: 100%;
+
+    padding: 80px 10px 60px; /* 🔥 remonte et aère */
+
   }
+
+
 
   /* ===== TITRE ===== */
+
   .avis-header {
-    margin-top: 0 !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
+
   }
+
+
 
   .avis-title {
-    font-size: 50px !important; /* Harmonisé avec Contact */
-    line-height: 1 !important;
-    display: inline-block !important;
+
+    font-size: 40px;
+
   }
+
+
 
   .avis-underline {
-    width: 110px !important;
-    height: 2px !important;
-    margin: -12px auto 0 !important; /* Calage identique à Contact */
-    background: var(--text) !important;
+
+    width: 85px;
+
+    margin-top: -6px;
+
   }
 
-  /* ===== FORMULAIRE (Intégration propre) ===== */
+
+
+  /* ===== FORMULAIRE ===== */
+
   .avis-form-zone {
-    margin-bottom: 40px !important;
-    display: flex !important;
-    justify-content: center !important;
+
+    margin-bottom: 60px;
+
   }
+
+
 
   .avis-typeform-wrap {
-    width: 90% !important;
-    max-width: 350px !important; /* Même largeur que Contact pour l'harmonie */
-    height: 450px !important;
-    position: relative !important;
-    margin: 0 auto !important;
-    overflow: hidden !important;
+
+    width: 100%;
+
+    max-width: none; /* 🔥 enlève la limite */
+
   }
 
-  /* Cover Top (Uniquement le haut pour cacher le titre Typeform) */
+
+
+  /* covers plus propres mobile */
+
   .avis-typeform-wrap::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 30px !important;
-    background: var(--bg) !important;
-    z-index: 10 !important;
+
+    height: 30px;
+
+    overflow: hidden;
+
   }
 
-  /* Suppression du Cover Bottom comme demandé */
+
+
   .avis-typeform-wrap::after {
-    display: none !important;
+     display: none !important; 
   }
+
+
 
   /* ===== PRECEDENTS AVIS ===== */
+
   .avis-prev-title {
-    font-size: 38px !important;
-    margin-top: 20px !important; /* Remis à plat car le questionnaire est inline */
-    margin-bottom: 30px !important;
-    text-align: center !important;
+
+    font-size: 38px;
+
+    margin-top: -100px;
+
+    margin-bottom: 35px;
+
   }
+
+
 
   .avis-list {
-    gap: 18px !important;
-    width: 100% !important;
-    padding: 0 10px !important;
+
+    gap: 18px;
+
   }
 
-  /* ===== BULLES AVIS ===== */
-  .avis-bubble {
-    width: 95% !important;
-    margin: 0 auto !important;
-    padding: 16px !important;
-    border-radius: 20px !important;
+
+
+  .avis-prev-zone {
+
+  position: relative;
+
+  z-index: 10000; /* 🔥 au-dessus du cover */
+
   }
+
+
+
+  /* ===== BULLES ===== */
+
+  .avis-bubble {
+
+    width: 95%;
+
+    padding: 14px 16px;
+
+    border-radius: 26px; /* 🔥 plus compact */
+
+  }
+
+
 
   .avis-bubble-head {
-    font-size: 24px !important;
+
+    font-size: 26px;
+
+    margin-bottom: 6px;
+
   }
 
+
+
   .avis-bubble-text {
-    font-size: 18px !important;
-    line-height: 1.4 !important;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
   }
-}

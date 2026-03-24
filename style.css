@@ -1870,9 +1870,15 @@ iframe {
 }
 
 @media (max-width: 768px){
-  .tf-widget,
-  .typeform-embed{
+
+  .tf-widget{
     width: 100% !important;
-    height: 550px !important;
+    height: 520px !important;
   }
+
+  .tf-widget iframe{
+    width: 100% !important;
+    height: 100% !important;
+  }
+
 }

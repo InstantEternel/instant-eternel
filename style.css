@@ -1648,6 +1648,7 @@ iframe {
 @media (max-width: 768px) {
   .contact-page {
     height: auto !important;
+    min-height: 100vh;
     overflow-y: auto !important;
     display: block !important;
   }
@@ -1655,59 +1656,79 @@ iframe {
   .contact-container {
     display: flex !important;
     flex-direction: column !important;
-    padding: 40px 20px !important; /* On remonte tout le bloc */
-    height: auto !important;
+    width: 100% !important;
+    padding: 60px 20px 40px !important;
+    margin: 0 !important;
+    gap: 0 !important;
   }
 
-  /* --- TITRE & TRAIT (Plus haut et plus serrés) --- */
+  /* --- TITRE ET SOULIGNÉ (Haut de page) --- */
   .contact-left {
-    margin-bottom: 10px !important; /* Moins d'espace sous le titre */
-  }
-  .contact-title {
-    margin-top: -20px !important; /* Remonte le titre vers le menu */
-    font-size: 55px !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
     text-align: center;
   }
+  .contact-title {
+    margin-top: 0 !important;
+    font-size: 50px !important;
+  }
   .contact-underline {
-    margin: -25px auto 0 !important; /* -25px pour coller le trait au mot */
+    margin: -15px auto 0 !important; /* Colle le trait au texte */
     width: 140px;
   }
 
-  /* --- LE QUESTIONNAIRE --- */
+  /* --- LE QUESTIONNAIRE (Zone centrale) --- */
   .contact-form-wrap {
     width: 100% !important;
-    height: 480px !important;
-    margin: 0 auto !important; /* Centré horizontalement */
+    height: 400px !important; /* Hauteur ajustée pour mobile */
+    margin: 20px 0 !important;
     position: relative;
-    z-index: 10;
+    z-index: 5; /* Assure que le questionnaire est "au-dessus" pour être cliquable */
   }
 
-  /* On force le contenu de Typeform à remonter pour cacher leur titre interne */
-  .tf-widget iframe {
-    margin-top: -40px !important; /* Truc de ninja pour cacher le "Contact web" */
-    height: calc(100% + 40px) !important;
+  /* --- LES DEUX TRAITS (Milieu de page) --- */
+  .contact-separator {
+    display: block !important;
+    height: 40px !important;
+    position: relative;
+    margin: 20px 0;
   }
-
-  /* --- LES COVERS (Ajustés pour cacher le haut et le bas) --- */
-  .tf-cover-top { 
-    height: 70px !important; /* Plus haut pour bien masquer le titre Typeform */
-    top: 0;
-    z-index: 15;
-    background: var(--bg) !important;
+  .contact-separator .line {
+    position: absolute;
+    height: 2px !important;
+    width: 100px !important;
+    background: var(--text);
+    top: 50%;
+    left: 0;
   }
-  .tf-cover-bottom { 
-    height: 90px !important; /* Plus haut pour cacher le badge et les flèches */
-    bottom: 0;
-    z-index: 15;
-    background: var(--bg) !important;
+  .contact-separator .line-b {
+    top: calc(50% + 8px); /* Décale la deuxième ligne vers le bas */
+    width: 80px !important;
   }
 
   /* --- LES INFOS (Bas de page) --- */
   .contact-infos {
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     text-align: left;
+    display: flex;
+    flex-direction: column;
     gap: 30px !important;
-    padding-left: 10px;
+  }
+  .contact-label { font-size: 30px !important; }
+  .contact-text { font-size: 18px !important; }
+
+  /* --- LES COVERS (Masques) --- */
+  .tf-cover-top { 
+    height: 30px !important; 
+    top: 0; 
+    background: var(--bg) !important; 
+    z-index: 10;
+  }
+  .tf-cover-bottom { 
+    height: 40px !important; 
+    bottom: 0; 
+    background: var(--bg) !important; 
+    z-index: 10;
   }
 }
 

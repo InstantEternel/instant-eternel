@@ -1823,7 +1823,7 @@ iframe {
 
 
 
- /* ===== FORMULAIRE (Nettoyage des 2 covers) ===== */
+/* ===== FORMULAIRE (Nettoyage des covers) ===== */
   .avis-form-zone {
     margin-bottom: 60px !important;
     display: flex !important;
@@ -1831,22 +1831,24 @@ iframe {
     position: relative !important;
   }
 
-  /* ICI : On supprime le cache "ordinateur" qui déborde sur mobile */
+  /* 1. ON TUE LE CACHE DE DROITE (Ligne 112 de ton CSS global) */
   .avis-form-zone::after {
-    display: none !important;
     content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   .avis-typeform-wrap {
     width: 95% !important;
     max-width: 350px !important; 
-    height: 450px !important;
+    height: 480px !important; /* On l'agrandit un poil pour être sûr de voir le bouton */
     position: relative !important;
     margin: 0 auto !important;
-    overflow: hidden !important;
+    overflow: visible !important; /* On laisse respirer le bouton si besoin */
   }
 
-  /* Cover du haut (on le garde pour le titre) */
+  /* 2. ON GARDE LE CACHE DU HAUT (Pour le titre) */
   .avis-typeform-wrap::before {
     content: "" !important;
     position: absolute !important;
@@ -1856,12 +1858,21 @@ iframe {
     height: 35px !important;
     background: var(--bg) !important;
     z-index: 10 !important;
+    display: block !important;
   }
 
-  /* On supprime le cover du bas du wrap */
+  /* 3. ON TUE LE CACHE DU BAS (Ligne 84 de ton CSS global) */
   .avis-typeform-wrap::after {
-    display: none !important;
-    content: none !important;
+    content: none !important; /* Supprime le contenu */
+    display: none !important; /* Cache le bloc */
+    width: 0 !important;
+    height: 0 !important;
+    bottom: -100px !important; /* L'envoie très loin hors écran au cas où */
+  }
+
+  /* On s'assure que l'iframe n'est pas limitée par un overflow */
+  .avis-typeform {
+    min-height: 480px !important;
   }
 
 

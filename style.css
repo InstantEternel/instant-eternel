@@ -1678,19 +1678,68 @@ iframe {
     background: var(--text) !important;
   }
 
-  /* --- 2. LE QUESTIONNAIRE (Au milieu) --- */
+  /* ==================================
+     3. LE QUESTIONNAIRE (La Méthode Radicale)
+     ================================== */
   .contact-right {
-    order: 2 !important; /* Force la 2ème position */
+    display: block !important;
     width: 100% !important;
+    /* Crée un contexte de centrage pour le wrap */
     display: flex !important;
-    justify-content: center !important;
+    justify-content: center !important; 
+    margin: 10px 0 !important;
   }
+  
   .contact-form-wrap {
-    width: 90% !important;
-    max-width: 350px !important; /* Évite qu'il ne déborde à droite */
-    height: 420px !important;
+    /* On force une largeur fixe plus petite pour mobile pour éviter le débordement */
+    width: 90% !important; 
+    max-width: 350px !important; /* Largeur max pour qu'il reste petit au milieu */
+    
+    /* Hauteur pour mobile */
+    height: 420px !important; 
+    
+    /* Centré horizontalement dans .contact-right */
+    margin: 0 auto !important; 
+    
     position: relative !important;
-    margin: 0 auto !important;
+    z-index: 5 !important;
+    overflow: hidden !important; /* Pour les covers */
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* Force le contenu de Typeform à s'adapter à la largeur du wrap */
+  .tf-widget {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .tf-widget iframe {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    filter: none !important; /* Supprime le gris */
+  }
+
+  /* MASQUES (Covers) Mobile Précis */
+  .tf-cover-top { 
+    height: 30px !important; 
+    top: 0 !important; 
+    left: 0 !important;
+    width: 100% !important;
+    background: var(--bg) !important; 
+    z-index: 10 !important;
+  }
+  .tf-cover-bottom { 
+    height: 50px !important; 
+    bottom: 0 !important; 
+    left: 0 !important;
+    width: 100% !important;
+    background: var(--bg) !important; 
+    z-index: 10 !important;
   }
 
   /* --- 3. LES DEUX TRAITS (En dessous du questionnaire) --- */
